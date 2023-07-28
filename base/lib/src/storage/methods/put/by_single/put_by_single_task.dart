@@ -65,6 +65,7 @@ class PutBySingleTask extends RequestTask<PutResponse> {
     final formDataMap = <String, dynamic>{
       'file': multipartFile,
       'token': token,
+      if((resource.name ?? '').isNotEmpty)
       'key': resource.name,
     };
 
